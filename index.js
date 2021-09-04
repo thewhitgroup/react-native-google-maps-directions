@@ -39,12 +39,15 @@ function getDirections ({ destination, source, params = [], waypoints = [] } = {
     })
   }
 
-  if (destination) {
-    params.push({
-      key: 'destination',
-      value: `${destination}`
-    })
+  if(waypoints.length==0){
+    if (destination) {
+      params.push({
+        key: 'destination',
+        value: `${destination}`
+      })
+    }
   }
+  
 
   
 
